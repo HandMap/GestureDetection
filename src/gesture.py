@@ -106,9 +106,9 @@ class Gesture(object):
         totalError = 0
         distances = []
         for i in xrange(len(humanGesture.distanceIndices)):
-            toFind = (template.distance * 
+            toFind = (template.distance *
                         humanGesture.distanceIndices[i] /
-                        humanGesture.distance) 
+                        humanGesture.distance)
             comparePoint = linearizeTemplate(toFind)
             distance = Gesture.distance(comparePoint, humanGesture.points[i])
             totalDistance += distance

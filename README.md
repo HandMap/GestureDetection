@@ -3,7 +3,7 @@ Basic Gesture Detection
 
 Demo: https://www.youtube.com/watch?v=oH0ZkfFoeYU
 
-This program uses Python 2 and OpenCV 2 to attempt to detect the user's hand gestures. Gestures can be mapped to different actions and new gestures can be trained.
+This program uses Python 2 and OpenCV 2 (or 3 now) to attempt to detect the user's hand gestures. Gestures can be mapped to different actions and new gestures can be trained.
 
 Currently works best in low lighting with the hand as the brightest portion of the image.
 
@@ -32,7 +32,7 @@ Linux: Required modules are probably bundled with your favorite distribution of 
 
 1. On Debian/Ubuntu/etc: `sudo apt-get install python`
 2. Download and install NumPy: `sudo apt-get install python-numpy`
-3. Download and install OpenCV 2 for Python: http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html
+3. Download and install OpenCV 2 (or 3) for Python: http://docs.opencv.org/doc/tutorials/introduction/linux_install/linux_install.html
 
 Usage
 ===========
