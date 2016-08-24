@@ -12,8 +12,8 @@ class GestureProcessor(object):
         self.cap = cv2.VideoCapture(0)
         self.cameraWidth = 1280
         self.cameraHeight = 720
-        self.cap.set(cv2.cv.CV_CAP_PROP_FRAME_WIDTH, self.cameraWidth)
-        self.cap.set(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT, self.cameraHeight)
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.cameraWidth)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.cameraHeight)
         self.stationary = False
         self.record = False
         self.endGesture = False
@@ -115,7 +115,7 @@ class GestureProcessor(object):
                                             cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 
     def extractContours(self):
-        self.contours, _ = cv2.findContours(self.thresholded.copy(),
+        _, self.contours, _ = cv2.findContours(self.thresholded.copy(),
                                             cv2.RETR_TREE,
                                             cv2.CHAIN_APPROX_SIMPLE)
 
